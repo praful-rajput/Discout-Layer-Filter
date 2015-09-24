@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bdt_Discountlayerfilter>
+            <version>0.1.0</version>
+        </Bdt_Discountlayerfilter>
+    </modules>
+    <global>
+        <models>
+            <!--<discountlayerfilter>-->
+                <!--<class>Bdt_Discountlayerfilter_Model</class>-->
+                <!--<resourceModel>discountlayerfilter_mysql4</resourceModel>-->
+            <!--</discountlayerfilter>-->
+            <catalog>
+                <rewrite>
+                    <layer_filter_decimal>Bdt_Discountlayerfilter_Model_Layer_Filter_Decimal</layer_filter_decimal>
+                </rewrite>
+            </catalog>
+        </models>
+        <resources>
+            <discountlayerfilter_setup>
+                <setup>
+                    <module>Bdt_Discountlayerfilter</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </discountlayerfilter_setup>
+        </resources>
+
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <discountlayerfilter>
+                    <file>discountlayerfilter.xml</file>
+                </discountlayerfilter>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
